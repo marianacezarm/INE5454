@@ -1,0 +1,8 @@
+A
+ordenação por inserção, um
+algoritmo eficiente para
+a ordenação
+de
+um número pequeno de
+elementos
+...

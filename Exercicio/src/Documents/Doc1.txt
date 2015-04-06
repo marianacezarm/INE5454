@@ -1,0 +1,6 @@
+Informalmente, um algoritmo é qualquer
+procedimento computacional bem
+definido que toma valor ou conjunto de
+valores como entrada e produz algum
+valor ou conjunto de valores como
+saída...

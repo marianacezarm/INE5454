@@ -1,0 +1,6 @@
+O
+algoritmo
+Quicksort
+é um método
+de ordenação muito rápido e
+eficiente..
