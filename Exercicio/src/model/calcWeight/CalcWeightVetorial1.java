@@ -9,7 +9,7 @@ import model.processorDocument.TermDocument;
 import model.processorDocument.TermVocabulary;
 import model.processorDocument.Vocabulary;
 
-public class CalcWeightVetorial extends CalcWeight{
+public class CalcWeightVetorial1 extends CalcWeight{
 
 	@Override
 	public void calcWeight(Map<String, Document> documents,

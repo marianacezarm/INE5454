@@ -10,7 +10,7 @@ public class Main {
 		controller.calcWeight();
 		/*controller.printVocabulary();
 		System.out.println();
-		controller.printDocuments();
-		*/controller.search();
+		controller.printDocuments();*/
+		controller.search();
 	}
 }

@@ -7,10 +7,9 @@ import java.util.Map;
 import java.util.Set;
 
 import model.calcWeight.CalcWeight;
-import model.calcWeight.CalcWeightBoolean;
-import model.calcWeight.CalcWeightBooleanExtends;
-import model.calcWeight.CalcWeightTfIdf;
-import model.calcWeight.CalcWeightVetorial;
+import model.calcWeight.CalcWeightVetorial1;
+import model.calcWeight.CalcWeightVetorial2;
+import model.calcWeight.CalcWeightVetorial3;
 import model.processorDocument.Document;
 import model.processorDocument.Search;
 import model.processorDocument.TermDocument;
@@ -26,7 +25,7 @@ public class Controller {
 	CalcWeight calcWeight;
 	
 	public Controller(){
-		calcWeight = new CalcWeightTfIdf();
+		calcWeight = new CalcWeightVetorial3();
 	}
 	
 	public void processor(){
