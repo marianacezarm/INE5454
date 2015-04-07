@@ -9,6 +9,8 @@ import java.util.Set;
 import model.calcWeight.CalcWeight;
 import model.calcWeight.CalcWeightBoolean;
 import model.calcWeight.CalcWeightBooleanExtends;
+import model.calcWeight.CalcWeightTfIdf;
+import model.calcWeight.CalcWeightVetorial;
 import model.processorDocument.Document;
 import model.processorDocument.Search;
 import model.processorDocument.TermDocument;
@@ -24,7 +26,7 @@ public class Controller {
 	CalcWeight calcWeight;
 	
 	public Controller(){
-		calcWeight = new CalcWeightBooleanExtends();
+		calcWeight = new CalcWeightTfIdf();
 	}
 	
 	public void processor(){
@@ -55,7 +57,7 @@ public class Controller {
 
 	public void search() {
 		Search search = new Search();
-		List<Document> documentsSearch = search.getSearch(documents, calcWeight);
+		List<Document> documentsSearch = search.getSearch(documents, calcWeight, vocabulary);
 		for(Document document: documentsSearch){
 			System.out.println(document.getName()+ ": "+document.getSearchWeight());
 		}
@@ -68,7 +70,7 @@ public class Controller {
     	System.out.println("Vocabulary");
 		for(String term :terms){
 			termVocabulary = vocabulary.get(term);
-			System.out.println("Term: "+term+ " Frequency "+termVocabulary.getFrequency()+ " nDoc "+termVocabulary.getnDoc());
+			System.out.println("Term: "+term+ " Frequency "+termVocabulary.getFrequency()+ " nDoc "+termVocabulary.getnDoc()+" idf:"+ termVocabulary.getIdf());
 		}
     }
 
@@ -85,7 +87,7 @@ public class Controller {
 			Set<String> termsName = terms.keySet();
 			for(String term :termsName){
 				termDocument = terms.get(term);
-				System.out.println("Term: "+term+ " Frequency "+termDocument.getFrequency()+ " weight "+termDocument.getWeight());
+				System.out.println("Term: "+term+ " Frequency "+termDocument.getFrequency()+ " weight "+termDocument.getWeight()+" tf: "+ termDocument.getTf());
 			}	
 		}
 		

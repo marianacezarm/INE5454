@@ -54,11 +54,11 @@ public class Document implements Comparable<Document> {
 
 	}
 
-	public double getIdf(TermDocument term) {
+	public double getTf(TermDocument term) {
 		return terms.get(term).getFrequency();
 	}
 
-	public void calcIdf(TermDocument term) {
+	public void calcTf(TermDocument term) {
 		int maxFreq = 0;
 		Collection<String> termsC = terms.keySet();
 		for (String termC : termsC) {
@@ -66,7 +66,7 @@ public class Document implements Comparable<Document> {
 				maxFreq = terms.get(termC).getFrequency();
 			}
 		}
-		double idf = term.getFrequency() / maxFreq;
-		terms.get(term).setIdf(idf);
+		double tf = (double)term.getFrequency() / maxFreq;
+		term.setTf(tf);
 	}
 }

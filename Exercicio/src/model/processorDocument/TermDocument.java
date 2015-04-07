@@ -4,7 +4,7 @@ public class TermDocument {
 	
 	double weight;
 	int frequency; 
-	double idf;
+	double tf;
 	
 	public void addFrequency() {
 		frequency++;
@@ -12,7 +12,7 @@ public class TermDocument {
 	
 	public TermDocument(){
 		frequency = 1;
-		idf = 0;
+		tf = 0;
 	}
 
 	public int getFrequency(){
@@ -28,12 +28,12 @@ public class TermDocument {
 		
 	}
 	
-	public double getIdf() {
-		return idf;
+	public double getTf() {
+		return tf;
 	}
 
-	public void setIdf(double idf) {
-		this.idf = idf;
+	public void setTf(double tf) {
+		this.tf = tf;
 	}
 
 

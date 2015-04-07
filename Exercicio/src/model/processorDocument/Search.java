@@ -12,7 +12,7 @@ import model.processorFile.Reader;
 
 public class Search {
 
-	public List<Document> getSearch(Map<String, Document> documents, CalcWeight calcWeight) {
+	public List<Document> getSearch(Map<String, Document> documents, CalcWeight calcWeight, Vocabulary vocabulary) {
 		String text = Reader.returnText("src/search.txt");
 		PreProcessor preProcessor = new PreProcessor();
 		text = text.replaceAll("\n", "");
@@ -20,7 +20,7 @@ public class Search {
 		List<Document> documentSearch = new ArrayList<Document>();
 		Set<String> documentsName = documents.keySet();
 		for(String document :documentsName){
-		    calcWeight.calcWeightForSearch(documents.get(document), search);
+		    calcWeight.calcWeightForSearch(documents.get(document), search, vocabulary);
 		    documentSearch.add(documents.get(document));
 		}
 		Collections.sort(documentSearch);

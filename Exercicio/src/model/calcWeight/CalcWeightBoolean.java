@@ -25,7 +25,7 @@ public class CalcWeightBoolean extends CalcWeight {
 	}
 
 	@Override
-	public void calcWeightForSearch(Document document, List<String> search) {
+	public void calcWeightForSearch(Document document, List<String> search, Vocabulary vocabulary) {
 		int containTerms = 0;
 		Map<String, TermDocument> termsDocument = document.getTerms();
 		Collection<String> terms = termsDocument.keySet();

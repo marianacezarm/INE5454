@@ -4,7 +4,7 @@ public class TermVocabulary {
 
 	int frequency; 
 	int nDoc;
-	double tf;
+	double idf;
 
 	public int getFrequency() {
 		return frequency;
@@ -18,7 +18,7 @@ public class TermVocabulary {
 	public TermVocabulary(int frequency) {
 		this.frequency += frequency;
 		nDoc = 1;
-		tf = 0;
+		idf = 0;
 	}
 
 
@@ -32,12 +32,12 @@ public class TermVocabulary {
 
 
 	public double getIdf() {
-		return tf;
+		return idf;
 	}
 
 
 	public void setIdf(double idf) {
-		this.tf = idf;
+		this.idf = idf;
 	}
 	
 	

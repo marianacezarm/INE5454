@@ -36,12 +36,8 @@ public class Vocabulary {
 		return vocabulary.get(term).getnDoc();
 	}
 	
-	public double getTf (TermVocabulary term) {
-		return vocabulary.get(term).getIdf();
-	}
-	
 	public void calcIdf (TermVocabulary term, int size) {
-		term.setIdf(Math.log(size/term.getFrequency()));
+		term.setIdf(Math.log10((double)size/term.getnDoc()));
 	}
 
 }

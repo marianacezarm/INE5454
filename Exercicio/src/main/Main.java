@@ -8,8 +8,9 @@ public class Main {
 		controller.processor();
 		controller.loadVocabulary();
 		controller.calcWeight();
-		//controller.printVocabulary();
-		//controller.printDocuments();
-		controller.search();
+		/*controller.printVocabulary();
+		System.out.println();
+		controller.printDocuments();
+		*/controller.search();
 	}
 }

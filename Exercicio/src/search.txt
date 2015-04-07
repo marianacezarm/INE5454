@@ -1,1 +1,1 @@
-algoritmo, ordenação, entrada, saída, programa
+algoritmo, ordenação, entrada, saída, programa 

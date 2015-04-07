@@ -10,6 +10,9 @@ public abstract class CalcWeight {
 	
 	public abstract void calcWeight(Map<String, Document> documents, Vocabulary vocabulary);
 
-	public abstract void calcWeightForSearch(Document document, List<String> search);
+	public abstract void calcWeightForSearch(Document document, List<String> search, Vocabulary vocabulary);
+		
+		
+	
 
 }
